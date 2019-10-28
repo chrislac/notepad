@@ -1,8 +1,3 @@
----
-
-
----
-
 <p>Your ingress don’t have any IP address assigned to it. It seems like you don’t have ingress enabled on your minikube system.<br>
 I’ve reproduced this behavior and I also have this situation:</p>
 <pre><code>user@bf:~$ kubectl get ingresses.
