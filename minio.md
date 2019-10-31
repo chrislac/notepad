@@ -1,47 +1,45 @@
-<p>christofoletti@bf:~/charts/stable/minio$ helm install bitnami/minio<br>
-NAME:   honest-mink<br>
-LAST DEPLOYED: Thu Oct 31 14:07:08 2019<br>
-NAMESPACE: default<br>
-STATUS: DEPLOYED</p>
-<p>RESOURCES:<br>
-==&gt; v1/Deployment<br>
-NAME               READY  UP-TO-DATE  AVAILABLE  AGE<br>
-honest-mink-minio  0/1    0           0          9s</p>
-<p>==&gt; v1/PersistentVolumeClaim<br>
-NAME               STATUS   VOLUME    CAPACITY  ACCESS MODES  STORAGECLASS  AGE<br>
-honest-mink-minio  Pending  standard  15s       Filesystem</p>
-<p>==&gt; v1/Secret<br>
-NAME               TYPE    DATA  AGE<br>
-honest-mink-minio  Opaque  2     29s</p>
-<p>==&gt; v1/Service<br>
-NAME               TYPE       CLUSTER-IP     EXTERNAL-IP  PORT(S)   AGE<br>
-honest-mink-minio  ClusterIP  10.101.38.194         9000/TCP  9s</p>
-<p>NOTES:<br>
-** Please be patient while the chart is being deployed **</p>
-<p>MinIO can be accessed via port 9000 on the following DNS name from within your cluster:</p>
-<p>honest-mink-minio.default.svc.cluster.local</p>
-<p>To get your credentials run:</p>
-<p>export MINIO_ACCESS_KEY=<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mi>k</mi><mi>u</mi><mi>b</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>l</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>s</mi><mi>e</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>t</mi><mo>−</mo><mo>−</mo><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>e</mi><mi>d</mi><mi>e</mi><mi>f</mi><mi>a</mi><mi>u</mi><mi>l</mi><mi>t</mi><mi>h</mi><mi>o</mi><mi>n</mi><mi>e</mi><mi>s</mi><mi>t</mi><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mi>k</mi><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>o</mi><mo>−</mo><mi>o</mi><mi>j</mi><mi>s</mi><mi>o</mi><mi>n</mi><mi>p</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>=</mo><mi mathvariant="normal">"</mi><mrow><mi mathvariant="normal">.</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mi mathvariant="normal">.</mi><mi>a</mi><mi>c</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>s</mi><mo>−</mo><mi>k</mi><mi>e</mi><mi>y</mi></mrow><mi mathvariant="normal">"</mi><mi mathvariant="normal">∣</mi><mi>b</mi><mi>a</mi><mi>s</mi><mi>e</mi><mn>64</mn><mo>−</mo><mo>−</mo><mi>d</mi><mi>e</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo stretchy="false">)</mo><mi>e</mi><mi>x</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>M</mi><mi>I</mi><mi>N</mi><mi>I</mi><msub><mi>O</mi><mi>S</mi></msub><mi>E</mi><mi>C</mi><mi>R</mi><mi>E</mi><msub><mi>T</mi><mi>K</mi></msub><mi>E</mi><mi>Y</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">(kubectl get secret --namespace default honest-mink-minio -o jsonpath="{.data.access-key}" | base64 --decode)
-   export MINIO_SECRET_KEY=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right: 0.03148em;">k</span><span class="mord mathdefault">u</span><span class="mord mathdefault">b</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right: 0.01968em;">l</span><span class="mord mathdefault" style="margin-right: 0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right: 0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord">−</span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right: 0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right: 0.01968em;">l</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.77777em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right: 0.03148em;">k</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.74285em; vertical-align: -0.08333em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 0.88888em; vertical-align: -0.19444em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right: 0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">"</span><span class="mord"><span class="mord">.</span><span class="mord mathdefault">d</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mord mathdefault" style="margin-right: 0.03148em;">k</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right: 0.03588em;">y</span></span><span class="mord">"</span><span class="mord">∣</span><span class="mord mathdefault">b</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord">6</span><span class="mord">4</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord">−</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mclose">)</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right: 0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right: 0.10903em;">M</span><span class="mord mathdefault" style="margin-right: 0.07847em;">I</span><span class="mord mathdefault" style="margin-right: 0.10903em;">N</span><span class="mord mathdefault" style="margin-right: 0.07847em;">I</span><span class="mord"><span class="mord mathdefault" style="margin-right: 0.02778em;">O</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.02778em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right: 0.05764em;">S</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right: 0.05764em;">E</span><span class="mord mathdefault" style="margin-right: 0.07153em;">C</span><span class="mord mathdefault" style="margin-right: 0.00773em;">R</span><span class="mord mathdefault" style="margin-right: 0.05764em;">E</span><span class="mord"><span class="mord mathdefault" style="margin-right: 0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: -0.13889em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right: 0.07153em;">K</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right: 0.05764em;">E</span><span class="mord mathdefault" style="margin-right: 0.22222em;">Y</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span></span></span></span></span>(kubectl get secret --namespace default honest-mink-minio -o jsonpath="{.data.secret-key}" | base64 --decode)</p>
-<p>To connect to your MinIO server using a client:</p>
-<ul>
-<li>
-<p>Run a MinIO Client pod and append the desired command (e.g. ‘admin info’):</p>
-<p>kubectl run --namespace default honest-mink-minio-client <br>
-–rm --tty -i --restart=‘Never’ <br>
-–env MINIO_SERVER_ACCESS_KEY=<span class="katex--inline">KaTeX parse error: Undefined control sequence: \
- at position 18: …NIO_ACCESS_KEY \̲
-̲   --env MINIO_…</span>MINIO_SECRET_KEY <br>
-–env MINIO_SERVER_HOST=honest-mink-minio <br>
-–image <a href="http://docker.io/bitnami/minio-client:2019.10.9-debian-9-r16">docker.io/bitnami/minio-client:2019.10.9-debian-9-r16</a> – admin info minio</p>
-</li>
-</ul>
-<p>To access the MinIO web UI:</p>
-<ul>
-<li>
-<p>Get the MinIO URL:</p>
-<p>echo “MinIO web URL: <a href="http://127.0.0.1:9000/minio">http://127.0.0.1:9000/minio</a>”<br>
-kubectl port-forward --namespace default svc/honest-mink-minio 9000:9000</p>
-</li>
-</ul>
+<p>You can grab your key and password by reading the secret keys and decode them.<br>
+In my example we have the following secret created by the installer:</p>
+<pre><code>christofoletti@bf:~/charts/stable/minio$ kubectl get secrets 
+NAME                                TYPE                                  DATA   AGE
+crusty-mongoose-minio               Opaque                                2      15m
+crusty-mongoose-minio-token-jqbcb   kubernetes.io/service-account-token   3      11m
+</code></pre>
+<p>You can check your encoded key by running:</p>
+<pre><code>user@bf:~/charts/stable/minio$ kubectl get secret --namespace default crusty-mongoose-minio -o yaml
+apiVersion: v1
+data:
+  accesskey: bXlhY2Nlc3NrZXk=
+  secretkey: bXlzZWNyZXRrZXk=   
+kind: Secret
+metadata:
+  creationTimestamp: "2019-10-31T14:27:52Z"
+  labels:
+    app: minio
+    chart: minio-2.5.16
+    heritage: Tiller
+    release: crusty-mongoose
+  name: crusty-mongoose-minio
+  namespace: default
+  resourceVersion: "358025"
+  selfLink: /api/v1/namespaces/default/secrets/crusty-mongoose-minio
+  uid: af8ed190-4e59-49df-b584-824a4eb14439
+type: Opaque
+</code></pre>
+<p>From here you can see my encoded access and secure keys:</p>
+<pre><code>accesskey: bXlhY2Nlc3NrZXk=
+secretkey: bXlzZWNyZXRrZXk=   
+</code></pre>
+<p>Now that we have it we can decode using the following command:</p>
+<pre><code>$ echo bXlhY2Nlc3NrZXk= | base64 --decode
+mysecretkey
+ echo bXlzZWNyZXRrZXk= | base64 --decode
+mysecretkey
+</code></pre>
+<p>Optionally you can grab using the following command:</p>
+<pre><code>$ kubectl get secret --namespace default fashionable-elk-minio -o jsonpath="{.data.accesskey}" |e 
+myaccesskey
+$ kubectl get secret --namespace default fashionable-elk-minio -o jsonpath="{.data.secretkey}" | base64 --decode 
+mysecretkey
+</code></pre>
 
